@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>School Management</title>
+  <style>
+    body {background-color: rgb(10, 55, 19); 
+      font-family: Arial, sans-serif;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header{
+      padding: 10px;
+      display: flex;
+      background-image: url(photos/cambg.jpeg); 
+      color: #f8f9f7;
+      text-shadow:3px 3px #051214;
+      text-align:center;
+      background-size: cover;
+  background-position:bottom;
+      justify-content:space-around;/* Adjust background image size to cover the element */}
+    
+    .school-logo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+    }
+    .name{
+      text-shadow: #000;
+      text-align:center;
+       padding-right: 100px;}
+    
+    footer {
+      background-color: #0c0c0c;
+      color: #fff;
+      padding: 20px;
+      text-align:center;
+      text-size-adjust: 24px;}
+      .footeritem{
+        margin: 30px ;
+        display:flex;
+        padding-top: 40px;
+      }
+      .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  margin:10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    }
+    .fa-youtube {
+  background: #ee6755;
+  color: white;
+    }.fa-linkedin {
+  background: #02518d;
+  color: white;
+    }
+    .nav-time {
+      float: right;
+      color: #f1f1f1;
+      text-align-last: justify;
+      margin-right: 10px;}
+
+.column {
+      background-image: url(photos/collection-hand-drawn-back-school-pattern_23-2148588313.avif);
+      width: 33.33%;
+      height: 500px;
+      float: left;
+      box-sizing: border-box;}
+
+.topnav {
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #181815;
+}
+
+.topnav a {
+  float:center ;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #606060e0;
+  color: rgba(230, 172, 95, 0.838);
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+}
+.card {
+  box-shadow: 1px 4px 8px 0 rgba(255, 253, 253, 0.849);
+  max-width: 500px;
+  max-height: 420px;
+  padding: 30px;
+  text-align:justify;
+  font-family: arial;
+}
+
+.title {
+  color: rgb(243, 238, 238);
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+  .parallax {
+    padding: 0%;
+  /* The image used */
+  background-image: url(photos/painted-solid-concrete-wall-textured-background_53876-101638.avif);
+
+  /* Full height */
+ height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment:scroll;
+  background-position:top;
+  background-size:cover;;
+  overflow: auto;
+}
+  </style>
+  <script>
+    function updateTime() {
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      var timeString = hours + ":" + minutes + ":" + seconds;
+      document.getElementById("current-time").textContent = timeString;
+    }
+
+    setInterval(updateTime, 1000); // Update time every second
+  </script>
+</head>
+<body>
+  <header><div class="header">
+    <div class="school-logo">
+      <img src="photos/logo rbv.jpg" >
+      </div>
+      <div class="name"><p>
+        <h1>
+        <br>
+    RASHTRA BHASHA VIDYALAYA , JORHAT   </h1><h2>  Rajamaidam  Road ,  Jorhat::Assam (785001)  </h2>( AFFILIATED  BOARD OF SECONDARY EDUCATION OF ASSAM )</p>
+      </div>
+  </div><marquee direction="left" style="color: #e1e1c1;"> ** "This website is created by Mr. Mehboob Ansari for final year major project Representation" **</marquee>
+  </header>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="students.html">Students</a>
+  <a href="teachers.html">Teachers</a>
+  <a href="course.html">Courses</a>
+  <a href="2 login.html">Login</a>
+  <a href="Rform.html">Register</a>
+  <a href="admissionform.html">Admission</a>
+  <a href="feesys.html">Fee payment</a>
+  <a href="academic.html">Academic</a>
+  <a href="contact.html">Contact</a>
+  <a href="ABOUT.HTML">About</a>
+  <div class="nav-time"> Time: <span id="current-time"></span></div>
+</div>
+  
+  
+  <div class="column"  style="padding: 20px;  margin: auto;">
+    <p>
+      <div class="vertical-menu">
+        <div class="active"><h1>NOTIFICATIONS</h1></div>
+        <marquee direction="up" style="height:380px;">
+        <a href="photos/purplesky.jpeg">results comming soon for the classes of I - X</a>
+        <a href="photos/purplesky.jpeg">Get admission </a>
+        <a href="photos/purplesky.jpeg">Pograms</a>
+        <a href="photos/purplesky.jpeg">NEW DATE</a>
+        <a href="photos/purplesky.jpeg">ALERTS</a>
+        <a href="photos/purplesky.jpeg">NEW SESSION</a>
+        <a href="#photos/purplesky.jpeg">NEW </a>
+        <a href="photos/purplesky.jpeg">SCIENCE CLASS</a>
+        <a href="photos/purplesky.jpeg">Pograms</a>
+        <a href="photos/purplesky.jpeg">NEW DATE</a>
+        <a href="photos/purplesky.jpeg">ALERTS</a>
+        <a href="photos/purplesky.jpeg">NEW SESSION</a>
+        <a href="#photos/purplesky.jpeg">NEW </a>
+        <a href="photos/purplesky.jpeg">SCIENCE CLASS</a>
+        <a href="photos/purplesky.jpeg">ARTS CLASS</a>
+      </div>
+    </marquee></div>
+      </p>
+  </div>
+
+  <div class="column">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="photos\fullscbg.jpeg" style="width:100%;  height: 485px;" >
+  <div class="text"> Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="photos/yoga.jpeg" style="width:100% ;  height: 485px;">
+  <div class="text"> Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="photos/windview.jpeg" style="width:100%;  height: 485px;" >
+  <div class="text">same</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/5</div>
+  <img src="photos/rday.jpeg" style="width:100%; height: 485px; ">
+  <div class="text">same</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5/5</div>
+  <img src="photos/studentr.jpeg" style="width:100% ; height: 485px;">
+  <div class="text">same</div>
+</div>
+
+</div>
+
+<div style="text-align:center;">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+  </div>
+  <div class="column" style="background-color: #d7eecc; ; ">
+<div class="parallax">
+<div class="card">
+  <img src="photos/studentr.jpeg" alt="about opacity" style="width:100%; height: 200px;">
+  <h1>From The Desk Of Principal</h1>
+  <p class="title">
+
+    Dear Student,<BR><BR>
+At Rashtra Bhasha Vidyalaya Jorhat, we strive to offer the very best of teaching and learning that has been specially tutored to meet the needs of the youngsters of today. The selection of excellent dedicated staff and a willingness to innovate in educational practiceshave all contributed to the academic success achieved by students at the school and beyond.
+<br><BR>
+The challenge to be the best, to be true citizens of our country is supported by a holistic approach to personal learning. The classroom programmes are rich and engaging and the range of cultural and sporting activities provide a number of opportunities that allow every student access to an environment where they can participate and excel.
+<br><BR>
+
+In all our endeavors at Rashtrabhasha Vidyalaya Jorhat, we are supported by the School Management Committee. We, at Rashtrabhasha Vidyalaya Jorhat view that effective schooling is a three way dynamic, with the student, family and the School working together to contribute to the learning process. Our goal is to give our students the necessary tools to have a choice about their future.
+<br><br>
+   " Education is the key to personal and societal growth. It plays a crucial role in shaping individuals and preparing them for future challenges." <br> <br>
+   "Education is not limited to classrooms; it is a lifelong process of learning and acquiring knowledge from various sources and experiences."<br><br>
+    "Education fosters social harmony and understanding by promoting tolerance, empathy, and respect for diverse cultures and perspectives."</p>
+  <p>With Best Wishes<br>
+
+    Principal, <br>
+    Rashtra Bhasha Vidyalaya Jorhat</p>
+  <div style="margin: 24px 10PX ; padding: 20PX;" >
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+</div>
+    </p>
+  </div>
+    
+  
+  <footer>
+<div class="footeritem">
+
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-linkedin"></a>
+</div>
+<BR><BR>
+&copy; 2023 RASHTRA BHASHA VIDALAYA .  All rights reserved.
+  </footer>
+</body>
+</html>

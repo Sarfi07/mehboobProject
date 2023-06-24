@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <style>
+            body {
+      background-image: url(photos/wooden-table-with-blurred-background_1134-14.avif);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;}
+        .container {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #3f99e7ac;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        header {
+      background-image: url(photos/header2.avif);
+      background-color: #333;
+      text-shadow:3px 3px #ecf4f5;
+      color: #051214;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+    }
+    
+    .logo-container {
+      margin-top: 150px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .Logo{    width: 200px;
+      height: 200px;
+      border-radius: 100%; /* Adjust the width as needed */
+  }
+  
+  .caption {
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration:underline;
+    color: black;
+  }
+  .topnav a.active {
+  background-color: #000000;
+  color: white;}
+  </style>
+</head>
+<body>
+  <header>
+     
+    <h1>RASHTRA BHASHA VIDYALAYA , JORHAT </h1></div>
+  </header>
+  <nav>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="students.html">Students</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="course.html">Courses</a>
+    <a href="2 login.html">Login</a>
+    <a href="Rform.html">Register</a>
+    <a class="active" href="admissionform.html">Admission</a>
+    <a href="feesys.html">Fee payment</a>
+    <a href="academic.html">Academic</a>
+    <a href="contact.html">Contact</a>
+    <a href="ABOUT.HTML">About</a>
+  </div>
+  </nav>
+    <div class="container">
+        <h2>Admission Form</h2>
+        <form action="submit-form.php" method="POST">
+
+            
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required>
+            <label for="qualification">Qualification:</label>
+            <textarea id="qualification" name="qualification" rows="4" required></textarea>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <label for="previous_school">Previous School:</label>
+        <input type="text" id="previous_school" name="previous_school" required>
+        <label for="marks_percentage">Marks Percentage:</label>
+        <input type="number" id="marks_percentage" name="marks_percentage" required>
+        <label for="selected_stream">Selected Stream:</label>
+        <select id="selected_stream" name="selected_stream" required>
+            <option value="">Select Stream</option>
+            <option value="science">Science</option>
+            <option value="commerce">Commerce</option>
+            <option value="arts">Arts</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

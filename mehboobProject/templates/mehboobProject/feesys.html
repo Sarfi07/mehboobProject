@@ -1,0 +1,87 @@
+{% extends "mehboobProject/layout.html" %}
+{% load static %}
+
+{% block title %} Fees System {% endblock %}
+
+{% block customizeStyle %} <link rel="stylesheet" href="{% static 'mehboobProject/feesys.css' %}"> {% endblock %}
+
+{% block body %}
+
+<div class="payment-container">
+  <h1>Select a Payment Method</h1>
+  <div class="payment-methods">
+    <div class="payment-method" onclick="selectPaymentMethod(1)">
+      <img src="{% static 'mehboobProject/School Management_files/card.jpeg' %}" alt="Credit Card">
+      <p>Credit Card</p>
+    </div>
+    <div class="payment-method" onclick="selectPaymentMethod(2)">
+      <img src="{% static 'mehboobProject/School Management_files/paypal.jpeg' %}" alt="PayPal">
+      <p>PayPal</p>
+    </div>
+    <div class="payment-method" onclick="selectPaymentMethod(3)">
+      <img src="{% static 'mehboobProject/School Management_files/gpay.jpeg' %}" alt="Google Pay">
+      <p>Google Pay</p>
+    </div>
+  </div>
+  <form id="credit-card-form" class="payment-form">
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" required>
+
+    <label for="expiry">Expiry Date:</label>
+    <input type="text" id="expiry" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" required>
+
+    <input type="submit" value="Pay">
+  </form>
+  <form id="paypal-form" class="payment-form">
+    <label for="paypal-email">PayPal Email:</label>
+    <input type="text" id="paypal-email" required>
+
+    <label for="paypal-password">Password:</label>
+    <input type="password" id="paypal-password" required>
+
+    <input type="submit" value="Pay">
+  </form>
+  <form id="google-pay-form" class="payment-form">
+    <label for="google-pay-email">Google Pay Email:</label>
+    <input type="text" id="google-pay-email" required>
+
+    <label for="google-pay-password">Password:</label>
+    <input type="password" id="google-pay-password" required>
+
+    <input type="submit" value="Pay">
+  </form>
+</div>
+
+<script>
+  var paymentForms = document.getElementsByClassName("payment-form");
+
+  function selectPaymentMethod(method) {
+    // Hide all payment forms
+    for (var i = 0; i < paymentForms.length; i++) {
+      paymentForms[i].classList.remove("show");
+    }
+
+    // Show the selected payment form
+    var selectedForm = document.getElementById(getFormId(method));
+    selectedForm.classList.add("show");
+  }
+
+  function getFormId(method) {
+    switch (method) {
+      case 1:
+        return "credit-card-form";
+      case 2:
+        return "paypal-form";
+      case 3:
+        return "google-pay-form";
+      default:
+        return "";
+    }
+  }
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,67 @@
+{% extends "mehboobProject/layout.html" %}
+{% load static %}
+
+{% block title %} Contact Us! {% endblock %}
+
+{% block customizeStyle %} <link rel="stylesheet" href="{% static 'mehboobProject/contact.css' %}"> {% endblock %}
+
+{% block body %}
+
+<div class="contact-container">
+  <div class="contactMessage">
+    <h1>Contact Us</h1>
+    <p>Feel free to get in touch with us!</p>
+  </div>
+
+
+  <!-- /Hero-area -->
+
+  <!-- Contact -->
+
+    <!-- container -->
+    <div class="container">
+
+      <!-- row -->
+      <div class="row">
+
+        <!-- contact form -->
+        <div class="col-md-6">
+          <div class="contact-form">
+            <h4>Send A Message</h4>
+            <form action="{% url 'contactRequest' %}" method="post">
+              {% csrf_token %}
+              <input class="input" type="text" name="name" placeholder="Name">
+              <input class="input" type="email" name="email" placeholder="Email">
+              <input class="input" type="text" name="subject" placeholder="Subject">
+              <textarea class="input" name="message" placeholder="Enter your Message"></textarea>
+              <input type="submit" class="main-button icon-button pull-right" value="Send">
+            </form>
+          </div>
+        </div>
+        <!-- /contact form -->
+
+        <!-- contact information -->
+        <div class="col-md-6 col-sm-6">
+          <h4>Contact Information</h4>
+          <ul class="contact-details">
+            <li>&#x1F4E7; .  -> mdmehboobansari69@gmail.com </li>
+            <li> &#x260E;</i>.   -> +91 8876954900</li>
+            <li>	&#xf3c5; .   ->  Raja Maidam Rd, New Colony, Jorhat, Assam - 785001</li>
+          </ul>
+-
+          <!-- contact map -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14249.572232405004!2d94.214645!3d26.763738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc81536bf545a41!2zMjbCsDQ1JzQ5LjUiTiA5NMKwMTInNTIuNyJF!5e0!3m2!1sen!2sus!4v1672846935609!5m2!1sen!2sus" width="100%" height="400" style="border:1px solid #222;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+<!--						<div id="contact-map"></div>
+-->						<!-- /contact map -->
+
+        </div>
+        <!-- contact information -->
+
+      </div>
+      <!-- /row -->
+
+    </div>
+    <!-- /container -->
+  </div>
+{% endblock %}

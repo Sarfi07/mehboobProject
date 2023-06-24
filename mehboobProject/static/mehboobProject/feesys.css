@@ -1,0 +1,89 @@
+.payment-container {
+    color: #000000;
+    text-shadow: 1px 1px rgb(244, 244, 244);
+    background-color: rgb(72, 128, 225);
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(119, 112, 112, 0.715);
+}
+
+.payment-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-width: fit-content;
+}
+
+.payment-method {
+  flex: 0 0 30%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-method:hover {
+  background-color: #f5f5f5;
+}
+
+.payment-method img {
+  width: 80%;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.payment-method p {
+  margin: 0;
+}
+
+.selected {
+  background-color: #f5f5f5;
+  border-color: #888;
+}
+
+.payment-form {
+  display: none;
+  margin-top: 20px;
+}
+
+.payment-form.show {
+  display: block;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.payment-form input[type="text"],
+.payment-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.payment-form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-form input[type="submit"]:hover {
+  background-color: #45a049;
+}

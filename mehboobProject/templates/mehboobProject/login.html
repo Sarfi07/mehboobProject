@@ -1,0 +1,26 @@
+{% extends "mehboobProject/layout.html" %}
+{% load static %}
+{% block title %}Log In{% endblock %}
+
+{% block customizeStyle %} <link rel="stylesheet" href="{% static 'mehboobProject/login.css' %}">{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h2>Login</h2>
+  <form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    
+    <input type="submit" value="Login">
+  </form>
+  <div class="form-toggle">
+    <a href="{% url 'htmlRender' 'Rform.html' %}" style="color: black;">Create an account</a>
+  </div>
+</div>
+
+{% endblock %}

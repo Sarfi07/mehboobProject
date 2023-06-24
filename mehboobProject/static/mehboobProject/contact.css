@@ -1,0 +1,44 @@
+  /* -- Contact Information -- */
+  .contact-details li  {
+	margin-bottom:20px;
+}
+
+.contact-details li i {
+	color: #FF6700;
+	margin-right: 15px;
+	border: 1px solid #EBEBEB;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+/* -- Contact Map -- */
+#contact-map {
+	height:260px;
+	border-radius:4px;}
+  /* -- Contact Form -- */
+.contact-form:after {
+	content:icon;
+	display:block;
+	clear:both;
+}
+
+.contact-form .input {
+	margin-bottom:20px;
+}
+
+.contact-form textarea.input {
+	height:200px;
+}
+
+.contact-container {
+    background-color: rgb(227, 210, 210);
+    color: black;
+    margin: 50px 0;
+}
+
+.contactMessage {
+    text-align: center;
+}

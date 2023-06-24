@@ -1,0 +1,38 @@
+{% extends "mehboobProject/layout.html" %}
+{% load static %}
+
+{% block title %} Academic {% endblock %}
+
+{% block customizeStyle %} <link rel="stylesheet" href="{% static 'mehboobproject/academic.css' %}">{% endblock %}
+
+{% block body %}
+<div class="logo-container">
+  <figure>
+    <a href="UNIFORM.HTML">
+      <img src="photos/uniform.jpeg" class="Logo">
+      <figcaption>
+        <div class="caption">SCHOOL UNIFORMS </div></figcaption>
+    </a>
+  </figure>
+  <figure>
+    <a href="GENERALRULE.HTML">
+      <img src="photos/rule.jpeg" class="Logo">
+      <figcaption>  <div class="caption">GENERAL RULES</div></figcaption>
+    </a>
+  </figure>
+  <figure>
+    <a href="C:\Users\91813\Desktop\mission project\School Management_files\ACTIVITIES_files">
+      <img src="photos/activites.jpeg" class="Logo">
+      <figcaption>
+        <div class="caption"> Activities. </div> </figcaption>
+    </a>
+  </figure>
+  <figure>
+    <a href="OURTEACHER.HTML">
+      <img src="photos/teacher.jpeg" class="Logo">
+      <figcaption>  <div class="caption">OUR TEACHERS</div></figcaption>
+    </a>
+  </figure>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "mehboobProject/layout.html" %}
+{% load static %}
+
+{% block title %} School Management {% endblock %}
+
+{% block customizeStyle %} <link rel="stylesheet" href="{% static 'mehboobProject/index.css' %}"> {% endblock %}
+
+{% block body %}
+<div class="column" style="padding: 20px;  margin: auto;">
+  <p>
+  <div class="vertical-menu">
+    <div class="active">
+      <h1>NOTIFICATIONS</h1>
+    </div>
+    <marquee direction="up" style="height:380px;">
+      <a href="photos/purplesky.jpeg">results comming soon for the classes of I - X</a>
+      <a href="photos/purplesky.jpeg">Get admission </a>
+      <a href="photos/purplesky.jpeg">Pograms</a>
+      <a href="photos/purplesky.jpeg">NEW DATE</a>
+      <a href="photos/purplesky.jpeg">ALERTS</a>
+      <a href="photos/purplesky.jpeg">NEW SESSION</a>
+      <a href="#photos/purplesky.jpeg">NEW </a>
+      <a href="photos/purplesky.jpeg">SCIENCE CLASS</a>
+      <a href="photos/purplesky.jpeg">Pograms</a>
+      <a href="photos/purplesky.jpeg">NEW DATE</a>
+      <a href="photos/purplesky.jpeg">ALERTS</a>
+      <a href="photos/purplesky.jpeg">NEW SESSION</a>
+      <a href="#photos/purplesky.jpeg">NEW </a>
+      <a href="photos/purplesky.jpeg">SCIENCE CLASS</a>
+      <a href="photos/purplesky.jpeg">ARTS CLASS</a>
+  </div>
+  </marquee>
+</div>
+</p>
+</div>
+
+<div class="column">
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="static/mehboobProject/photos/fullscbg.jpeg" style="width:100%;  height: 485px;">
+      <div class="text"> Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="static/mehboobProject/photos/yoga.jpeg" style="width:100% ;  height: 485px;">
+      <div class="text"> Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="static/mehboobProject/photos/windview.jpeg" style="width:100%;  height: 485px;">
+      <div class="text">same</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4/5</div>
+      <img src="static/mehboobProject/photos/rday.jpeg" style="width:100%; height: 485px; ">
+      <div class="text">same</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5/5</div>
+      <img src="static/mehboobProject/photos/studentr.jpeg" style="width:100% ; height: 485px;">
+      <div class="text">same</div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+</div>
+<div class="column" style="background-color: #d7eecc; ; ">
+  <div class="parallax">
+    <div class="card">
+      <img src="static/mehboobProject/photos/studentr.jpeg" alt="about opacity" style="width:100%; height: 200px;">
+      <h1>From The Desk Of Principal</h1>
+      <p class="title" style="color: black">
+
+        Dear Student,<BR><BR>
+        At Rashtra Bhasha Vidyalaya Jorhat, we strive to offer the very best of teaching and learning that has been
+        specially tutored to meet the needs of the youngsters of today. The selection of excellent dedicated staff and
+        a willingness to innovate in educational practiceshave all contributed to the academic success achieved by
+        students at the school and beyond.
+        <br><BR>
+        The challenge to be the best, to be true citizens of our country is supported by a holistic approach to
+        personal learning. The classroom programmes are rich and engaging and the range of cultural and sporting
+        activities provide a number of opportunities that allow every student access to an environment where they can
+        participate and excel.
+        <br><BR>
+
+        In all our endeavors at Rashtrabhasha Vidyalaya Jorhat, we are supported by the School Management Committee.
+        We, at Rashtrabhasha Vidyalaya Jorhat view that effective schooling is a three way dynamic, with the student,
+        family and the School working together to contribute to the learning process. Our goal is to give our students
+        the necessary tools to have a choice about their future.
+        <br><br>
+        " Education is the key to personal and societal growth. It plays a crucial role in shaping individuals and
+        preparing them for future challenges." <br> <br>
+        "Education is not limited to classrooms; it is a lifelong process of learning and acquiring knowledge from
+        various sources and experiences."<br><br>
+        "Education fosters social harmony and understanding by promoting tolerance, empathy, and respect for diverse
+        cultures and perspectives."
+      </p>
+      <p>With Best Wishes<br>
+
+        Principal, <br>
+        Rashtra Bhasha Vidyalaya Jorhat</p>
+      <div style="margin: 24px 10PX ; padding: 20PX">
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+      <p><button>Contact</button></p>
+    </div>
+  </div>
+  </p>
+</div>
+
+{% endblock %}

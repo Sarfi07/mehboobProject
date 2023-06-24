@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Attendance</title>
+    <style>
+        .container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, button {
+    margin-top: 5px;
+}
+</style>
+
+<script >
+    function markAttendance() {
+var studentName = document.getElementById("student-name").value;
+var attendance = document.getElementById("attendance").value;
+
+// Validate inputs
+if (studentName.trim() === "") {
+    alert("Please enter the student's name.");
+    return;
+}
+
+if (attendance === "") {
+    alert("Please select the attendance status.");
+    return;
+}
+
+// Send attendance data to the server for processing
+var formData = {
+    studentName: studentName,
+    attendance: attendance
+};
+
+// Replace 'submit-url' with the actual URL to submit the attendance data
+fetch('submit-url', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+})
+.then(function(response) {
+    if (response.ok) {
+        alert("Attendance marked successfully!");
+        document.getElementById("attendance-form").reset();
+    } else {
+        alert("Failed to mark the attendance. Please try again.");
+    }
+})
+.catch(function(error) {
+    alert("An error occurred while marking the attendance. Please try again later.");
+    console.error(error);
+});
+}
+
+</script>
+</head>
+<nav>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="students.html">Students</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="course.html">Courses</a>
+        <a href="2 login.html">Login</a>
+        <a href="Rform.html">Register</a>
+        <a href="admissionform.html">Admission</a>
+        <a href="feesys.html">Fee payment</a>
+        <a href="academic.html">Academic</a>
+        <a href="contact.html">Contact</a>
+        <a href="ABOUT.HTML">About</a>
+        <div class="nav-time"> Time: <span id="current-time"></span></div>
+      </div>
+</nav>
+<body>
+    <div class="container">
+        <h1>Student Attendance</h1>
+        <form id="attendance-form">
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="attendance">Attendance:</label>
+            <select id="attendance" name="attendance" required>
+                <option value="">Select Attendance</option>
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+            </select>
+
+            <button type="button" onclick="markAttendance()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
